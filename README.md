@@ -20,7 +20,7 @@ Data Privacy Vault es una aplicación de servidor que proporciona servicios de a
 
 1. Clona el repositorio:
    ```
-   git clone https://github.com/tu-usuario/data-privacy-vault.git
+   git clone git@github.com:mcforero95/WorkShop4TD.git
    cd data-privacy-vault
    ```
 
@@ -54,6 +54,16 @@ bash
 curl -X POST http://localhost:3001/secureChatGPT \
 -H "Content-Type: application/json" \
 -d '{"prompt":"Mi nombre es Juan Pérez, mi email es juan@example.com y mi teléfono es 1234567890. ¿Puedes escribirme un correo formal solicitando una entrevista de trabajo?"}'
+
+curl -X POST http://localhost:3001/anonymize \
+-H "Content-Type: application/json" \
+-d '{"message":"oferta de trabajo para Mario Forero con email mforero@example.com y teléfono 1234567890"}'
+
+
+curl -X POST http://localhost:3001/deanonymize \
+-H "Content-Type: application/json" \
+-d '{"anonymizedMessage":"oferta de trabajo para NAME_2c6cb09c8f71 con email EMAIL_2ac0b3d39712 y telefono PHONE_e807f1fcf82d"}'
+
 
 
 ## Contribuir
